@@ -10,7 +10,7 @@ export default function DemoSection() {
         <SparklesIcon />
       </div>
       <div className="bg-gray-800/50 w-[240px] rounded-xl overflow-hidden">
-        <video src="https://dawid-epic-captions.s3.us-east-1.amazonaws.com/" preload muted autoPlay loop></video>
+        <video src="https://dawid-epic-captions.s3.us-east-1.amazonaws.com/with-captions.mp4" preload muted autoPlay loop></video>
       </div>
     </section>
   );
