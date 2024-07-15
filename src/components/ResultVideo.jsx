@@ -3,8 +3,10 @@ import { transcriptionItemsToSrt } from "@/libs/awsTranscriptionHelpers";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL, fetchFile } from "@ffmpeg/util";
 import { useEffect, useState, useRef } from "react";
-import roboto from './../fonts/Roboto-Regular.ttf';
-import robotoBold from './../fonts/Roboto-Bold.ttf';
+// import roboto from './../fonts/Roboto-Regular.ttf';
+// import robotoBold from './../fonts/Roboto-Bold.ttf';
+import hind from './../fonts/Hind-Regular.ttf';
+import hindBold from './../fonts/Hind-Bold.ttf';
 
 export default function ResultVideo({ filename, transcriptionItems }) {
   const videoUrl =
@@ -33,8 +35,10 @@ export default function ResultVideo({ filename, transcriptionItems }) {
         "application/wasm"
       ),
     });
-    await ffmpeg.writeFile('/tmp/roboto.ttf', await fetchFile(roboto));
-    await ffmpeg.writeFile('/tmp/roboto-bold.ttf', await fetchFile(robotoBold));
+    // await ffmpeg.writeFile('/tmp/roboto.ttf', await fetchFile(roboto));
+    // await ffmpeg.writeFile('/tmp/roboto-bold.ttf', await fetchFile(robotoBold));
+    await ffmpeg.writeFile('/tmp/hind.ttf',await fetchFile(hind))
+    await ffmpeg.writeFile('/tmp/hind-bold.ttf',await fetchFile(hindBold));
     setLoaded(true);
   };
 
@@ -69,7 +73,7 @@ export default function ResultVideo({ filename, transcriptionItems }) {
       "-preset",
       "ultrafast",
       "-vf",
-      `subtitles=subs.srt:fontsdir=/tmp:force_style='Fontname=Roboto Bold,FontSize=30,MarginV=70,PrimaryColour=${toFFmpegColor(
+      `subtitles=subs.srt:fontsdir=/tmp:force_style='Fontname=Hind Bold,FontSize=30,MarginV=70,PrimaryColour=${toFFmpegColor(
         primaryColor
       )},OutlineColour=${toFFmpegColor(outlineColor)}'`,
       "output.mp4",
@@ -164,3 +168,4 @@ export default function ResultVideo({ filename, transcriptionItems }) {
     </>
   );
 }
+

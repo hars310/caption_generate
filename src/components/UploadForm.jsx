@@ -15,8 +15,8 @@ export default function UploadForm() {
     
     if (files.length > 0) {
       const file = files[0];
-      if (file.size > 10 * 1024 * 1024) {
-        alert('File size exceeds 10 MB limit. Please choose a smaller file.');
+      if (file.size > 50 * 1024 * 1024) {
+        alert('File size exceeds 50 MB limit. Please choose a smaller file.');
         return;
       }
       else{

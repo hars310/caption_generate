@@ -36,13 +36,13 @@ export default function FilePage({params}) {
 
   if (isTranscribing) {
     return (
-      <div>Transcribing your video...</div>
+      <div className="text-center h-[60vh] flex justify-center items-center p-4 mt-4">Transcribing your video...</div>
     );
   }
 
   if (isFetchingInfo) {
     return (
-      <div>Fetching information...</div>
+      <div className="text-center h-[60vh] flex justify-center items-center p-4 mt-4">Fetching information...</div>
     );
   }
 
