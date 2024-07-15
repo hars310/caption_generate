@@ -2,7 +2,7 @@
 
 This project is a Next.js-based web application that generates captions for videos using AWS services such as S3 for storage and Transcribe for speech-to-text conversion. The application allows users to upload videos, obtain transcriptions, customize caption styling, and overlay captions onto the video content.
 
-![Screenshot of Caption Generator](public/scrrenshot_caption_genertaor.png)
+![Screenshot of Caption Generator](public/screencapture-caption-generate-vercel-app-2024-07-15-12_52_06.png)
 
 ## Features
 
@@ -23,7 +23,7 @@ This project is a Next.js-based web application that generates captions for vide
 To run this project locally, follow these steps:
 
 1. **Clone the repository**:
-git clone https://github.com/your/repository.git
+git clone https://github.com/hars310/caption_generate.git
 cd caption-generator
 2. **Install dependencies**:
 3. **Set up AWS credentials**:
